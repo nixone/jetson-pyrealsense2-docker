@@ -1,16 +1,13 @@
 FROM nvcr.io/nvidia/l4t-base:r32.5.0
 RUN apt-get -y update && apt-get -y upgrade
-RUN apt-get -y install python3.8 python3.8-dev python3-pip libssl-dev libxinerama-dev libsdl2-dev curl libblas-dev liblapack-dev gfortran libssl-dev
-RUN apt-get -y install git
-RUN apt-get -y install cmake
-RUN apt-get -y install libcurl4
+RUN apt-get -y install python3.8 python3.8-dev python3-pip libssl-dev libxinerama-dev libsdl2-dev curl libblas-dev liblapack-dev gfortran libssl-dev git cmake
 RUN cd / && mkdir workspace && cd workspace
 WORKDIR /workspace
 RUN git clone --depth 1 --branch v2.48.0 https://github.com/IntelRealSense/librealsense.git
 WORKDIR /workspace/librealsense
 RUN mkdir build
 WORKDIR /workspace/librealsense/build
-RUN cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/python3.8 -DBUILD_NETWORK_DEVICE=ON
+RUN cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/python3.8
 RUN make -j4
 RUN make install
 ENV PYTHONPATH /usr/local/lib:/usr/local/lib/python3.8/pyrealsense2
