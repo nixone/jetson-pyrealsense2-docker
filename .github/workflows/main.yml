@@ -33,4 +33,4 @@ jobs:
           context: .
           platforms: linux/arm64/v8
           push: true
-          tags: nixone/jetson-pyrealsense2-docker:latest
+          tags: nixone/jetson-pyrealsense2:latest
