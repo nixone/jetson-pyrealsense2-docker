@@ -11,11 +11,3 @@ RUN cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/pyt
 RUN make -j4
 RUN make install
 ENV PYTHONPATH /usr/local/lib:/usr/local/lib/python3.8/pyrealsense2
-RUN python3.8 -m pip install cython
-RUN python3.8 -m pip install pybind11
-RUN python3.8 -m pip install scipy
-RUN python3.8 -m pip install numpy
-RUN python3.8 -m pip install scikit-build
-RUN python3.8 -m pip install opencv-python
-RUN python3.8 -m pip install PyYAML
-RUN python3.8 -m pip install Jetson.GPIO
