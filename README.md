@@ -6,7 +6,7 @@
 
 ## What's in
 
-* Based on [ubuntu](https://hub.docker.com/_/ubuntu):latest
+* Based on [NVIDIA L4T Base](https://ngc.nvidia.com/catalog/containers/nvidia:l4t-base):r32.6.1
 * Built and prepared with python3.8
 * [pyrealsense 2.49.0](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python)
-* Built for arm64 (Tested on Jetson Nano, Raspberry PI 4 (64 bit OS))
+* Built for arm64 (Tested on Jetson Nano, testing on Raspberry PI 4 (64 bit OS))
