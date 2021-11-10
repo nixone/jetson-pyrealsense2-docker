@@ -6,7 +6,5 @@
 
 ## What's in
 
-* Based on [ubuntu](https://hub.docker.com/_/ubuntu):latest
 * Built and prepared with python3.8
 * [pyrealsense 2.49.0](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python)
-* Built for `linux/arm64/v8` and `linux/amd64`
