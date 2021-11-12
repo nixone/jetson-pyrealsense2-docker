@@ -27,6 +27,6 @@ jobs:
         with:
           context: .
           file: Dockerfile.l4t
-          platforms: linux/arm64/v8, linux/amd64
+          platforms: linux/arm64/v8
           push: true
           tags: nixone/pyrealsense2:l4t
