@@ -1,4 +1,4 @@
-name: CI
+name: ubuntu_based
 
 on:
   push:
@@ -11,15 +11,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      max-parallel: 1
-      matrix:
-        include:
-          - tag: ubuntu
-            file: Dockerfile.ubuntu
-          - tag: l4t
-            file: Dockerfile.l4t
 
     steps:
       - name: Login to Docker Hub
@@ -40,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ${{ matrix.file }}
+          file: Dockerfile.ubuntu
           platforms: linux/arm64/v8, linux/amd64
           push: true
-          tags: nixone/pyrealsense2:${{ matrix.tag }}
+          tags: nixone/pyrealsense2:ubuntu
