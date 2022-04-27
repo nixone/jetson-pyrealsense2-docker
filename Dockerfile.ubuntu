@@ -4,11 +4,11 @@ RUN apt-get -y update && \
   rm -rf /var/lib/apt/lists/* && \
   apt-get clean
 RUN cd / && \
-  git clone --depth 1 --branch v2.49.0 https://github.com/IntelRealSense/librealsense.git && \
+  git clone --depth 1 --branch v2.50.0 https://github.com/IntelRealSense/librealsense.git && \
   cd librealsense && \
   mkdir build && \
   cd build && \
-  cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/python3.8 -DCMAKE_BUILD_TYPE=Release -DFORCE_RSUSB_BACKEND=ON && \
+  cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/python3.8 -DCMAKE_BUILD_TYPE=Release && \
   make -j4 && \
   make install && \
   cd ../.. && \
