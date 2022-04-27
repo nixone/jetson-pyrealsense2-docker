@@ -8,4 +8,4 @@
 ## What's in
 
 * Built and prepared with python3.8
-* [pyrealsense 2.49.0](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python)
+* [pyrealsense 2.50.0](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python)
