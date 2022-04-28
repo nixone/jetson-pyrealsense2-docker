@@ -12,3 +12,7 @@
 
 * Built and prepared with python3.8
 * [pyrealsense 2.50.0](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python)
+
+## No device connected
+
+Add `-v /dev:/dev --device-cgroup-rule "c 81:* rmw" --device-cgroup-rule "c 189:* rmw"` `docker run` options. 
