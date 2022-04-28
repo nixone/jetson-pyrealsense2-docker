@@ -15,4 +15,4 @@
 
 ## No device connected
 
-Add `-v /dev:/dev --device-cgroup-rule "c 81:* rmw" --device-cgroup-rule "c 189:* rmw"` `docker run` options. 
+Add `-v /dev:/dev --device-cgroup-rule "c 81:* rmw" --device-cgroup-rule "c 189:* rmw"` as `docker run` options. 
