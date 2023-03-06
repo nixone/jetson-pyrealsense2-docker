@@ -7,7 +7,7 @@
 
 ## What's in
 
-* Built and prepared with python3.8
+* Built and prepared with python3.11
 * [pyrealsense 2.53.1](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python)
 
 ## No device connected
