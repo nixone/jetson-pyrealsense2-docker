@@ -4,7 +4,7 @@ RUN apt-get -y update && \
   rm -rf /var/lib/apt/lists/* && \
   apt-get clean
 RUN cd / && \
-  git clone --depth 1 --branch v2.51.1 https://github.com/IntelRealSense/librealsense.git && \
+  git clone --depth 1 --branch v2.53.1 https://github.com/IntelRealSense/librealsense.git && \
   cd librealsense && \
   mkdir build && \
   cd build && \
