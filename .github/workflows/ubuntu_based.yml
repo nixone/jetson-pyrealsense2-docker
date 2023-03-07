@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Login to Docker Hub
@@ -14,13 +14,10 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
     
-      - name: Docker Setup Buildx
-        uses: docker/setup-buildx-action@v1.5.1
-    
       - uses: actions/checkout@v2
-    
-      - name: Clean buildx
-        run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
         
       - name: Build and push
         uses: docker/build-push-action@v2
