@@ -5,9 +5,9 @@ on:
 
 jobs:
   build:
-    runs-on: |
-      self-hosted
-      arm64
+    runs-on:
+      - self-hosted
+      - arm64
 
     steps:
       - name: Login to Docker Hub
