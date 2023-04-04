@@ -15,4 +15,9 @@ RUN cd / && \
   mkdir build && \
   cd build && \
   cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/python${PYTHON_VERSION} -DCMAKE_BUILD_TYPE=Release && \
-  make -j4
+  make -j4 && \
+  make install && \
+  cd ../.. && \
+  rm -rf librealsense
+ENV PYTHONPATH /usr/lib/python3/dist-packages/pyrealsense2
+
