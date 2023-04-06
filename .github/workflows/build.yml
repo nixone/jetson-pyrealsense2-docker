@@ -10,12 +10,12 @@ jobs:
         include:
         
           - ubuntu: focal
-            python: 3.8
-            realsense: 2.53.1
+            python: "3.8"
+            realsense: "2.53.1"
             
           - ubuntu: jammy
-            python: 3.10
-            realsense: 2.53.1
+            python: "3.10"
+            realsense: "2.53.1"
   
     runs-on: ubuntu-latest
 
