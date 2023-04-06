@@ -7,9 +7,15 @@ jobs:
   build:
     strategy:
       matrix:
-        opts: |
-          ["focal", "3.8", "2.53.1"]
-          ["jammy", "3.10", "2.53.1"]
+        include:
+        
+          - ubuntu: focal
+            python: 3.8
+            realsense: 2.53.1
+            
+          - ubuntu: jammy
+            python: 3.10
+            realsense: 2.53.1
   
     runs-on: ubuntu-latest
 
@@ -32,7 +38,7 @@ jobs:
           push: true
           platforms: linux/arm64, linux/amd64
           build-args: |
-            UBUNTU_VERSION=${{ matrix.opts[0] }}
-            PYTHON_VERSION=${{ matrix.opts[1] }}
-            REALSENSE_VERSION=${{ matrix.opts[2] }}
-          tags: nixone/pyrealsense2:${{ matrix.opts[0] }}python${{ matrix.opts[1] }}-realsense${{ matrix.opts[2] }}
+            UBUNTU_VERSION=${{ matrix.ubuntu }}
+            PYTHON_VERSION=${{ matrix.python }}
+            REALSENSE_VERSION=${{ matrix.realsense }}
+          tags: nixone/pyrealsense2:${{ matrix.ubuntu }}python${{ matrix.python }}-realsense${{ matrix.realsense }}
