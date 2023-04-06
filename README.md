@@ -1,6 +1,6 @@
 # Built pyrealsense2 for Docker
 
-[![build](https://github.com/nixone/pyrealsense2-docker/actions/workflows/build.yml/badge.svg)](https://github.com/nixone/pyrealsense2-docker/actions/workflows/build.yml)
+[![build](https://github.com/nixone/pyrealsense2/actions/workflows/build.yml/badge.svg)](https://github.com/nixone/pyrealsense2/actions/workflows/build.yml)
 
 [See on hub.docker.com](https://hub.docker.com/r/nixone/pyrealsense2)
 
