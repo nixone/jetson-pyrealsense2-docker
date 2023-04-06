@@ -1,4 +1,4 @@
-name: ubuntu_based
+name: build
 
 on:
   workflow_dispatch:
@@ -26,4 +26,4 @@ jobs:
           file: Dockerfile.ubuntu
           push: true
           platforms: linux/arm64, linux/amd64
-          tags: nixone/pyrealsense2:ubuntu
+          tags: nixone/pyrealsense2:latest
