@@ -19,5 +19,6 @@ RUN cd / && \
   make install && \
   cd ../.. && \
   rm -rf librealsense
+  
 ENV PYTHONPATH /usr/lib/python3/dist-packages/pyrealsense2
 
