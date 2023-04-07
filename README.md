@@ -6,9 +6,11 @@
 
 ## What's in
 
-* [pyrealsense 2.53.1](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python) built for python 3.10
+`linux/amd64` and `linux/arm64` versions of:
 
-ubuntu:latest based (arm64, amd64)
+* [pyrealsense 2.53.1](https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python) with:
+  * ubuntu focal, python 3.8
+  * ubuntu jammy, python 3.10
 
 ## FAQ: No device connected
 
