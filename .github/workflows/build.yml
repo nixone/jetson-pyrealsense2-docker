@@ -41,4 +41,4 @@ jobs:
             UBUNTU_VERSION=${{ matrix.ubuntu }}
             PYTHON_VERSION=${{ matrix.python }}
             REALSENSE_VERSION=${{ matrix.realsense }}
-          tags: nixone/pyrealsense2:${{ matrix.ubuntu }}python${{ matrix.python }}-realsense${{ matrix.realsense }}
+          tags: nixone/pyrealsense2:${{ matrix.ubuntu }}-py${{ matrix.python }}-rs${{ matrix.realsense }}
