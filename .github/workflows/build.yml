@@ -8,6 +8,9 @@ jobs:
     strategy:
       matrix:
         include:
+          - ubuntu: focal
+            python: "3.8"
+            realsense: "2.51.1"
         
           - ubuntu: focal
             python: "3.8"
