@@ -19,11 +19,10 @@ RUN cd / && \
   cd librealsense && \
   mkdir build && \
   cd build && \
-  cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/python${PYTHON_VERSION} -DCMAKE_BUILD_TYPE=Release && \
+  cmake ../ -DBUILD_PYTHON_BINDINGS:bool=true -DPYTHON_EXECUTABLE=/usr/bin/python${PYTHON_VERSION} -DCMAKE_BUILD_TYPE=Release -DOpenGL_GL_PREFERENCE=GLVND && \
   make -j4 && \
   make install && \
-  cd ../.. && \
-  rm -rf librealsense
+  cd / && rm -rf librealsense
   
 ENV PYTHONPATH /usr/lib/python3/dist-packages/pyrealsense2
 
